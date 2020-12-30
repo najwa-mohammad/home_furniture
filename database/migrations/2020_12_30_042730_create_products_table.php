@@ -26,6 +26,8 @@ class CreateProductsTable extends Migration
             $table->string('Shipping')->nullable();
             $table->integer('Warranty')->nullable();
             $table->string('Material')->nullable();
+            $table->string('feature_image')->default('products/feature_images/img.jpg');
+            $table->string('large_image')->default('products/large_image/img.jpg');
             $table->timestamps();
         });
     }

@@ -14,6 +14,8 @@ $factory->define(Product::class, function (Faker $faker) {
         'Comdition' => $faker->word,
         'Shipping' => $faker->word,
         'Material' => $faker->word,
+        'feature_image' => 'products/feature_images/img.jpg',
+        'large_image' => 'products/large_image/img.jpg',
         'Measurments' => $faker-> randomNumber(3),
         'SKU number' => $faker-> randomNumber(3),
         'Warranty' => $faker-> randomNumber(3),

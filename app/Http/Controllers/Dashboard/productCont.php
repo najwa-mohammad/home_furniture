@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Session;
 use App\category;
 
 
@@ -19,7 +21,14 @@ class productCont extends Controller
      */
     public function index()
     {
-        // $posts = Post::orderBy('created_at','desc')->paginate(10);
+
+
+        // Session::put('course','STW');
+        // // dd(Session::get('course'));
+        // if(Session::has('course')){
+        //     // dd('session course found');
+        // }
+        
         $products=Product::paginate(5);
         
         return view('dashboard.product.index',compact('products'));
@@ -59,6 +68,7 @@ class productCont extends Controller
             'code'=>'required|unique:products|integer',
             'body' => 'required',
             'category_id' => 'required|integer',
+            'post_image' => 'required|mimes:jpeg,png,bmp,jpg'
             
         ];
 
@@ -81,6 +91,11 @@ class productCont extends Controller
         $product->price=$request->price;
         $product->code = $request->code;
         $product->category_id=$request->category_id;
+        $productImage = $request->file('product_image');
+        $fileName = time().'.'.$productImage->extension();
+        $productImage->move('product_images',$fileName);
+        $product->feature_image = $fileName;
+        $product->large_image = $fileName;
         $product->save();
         return redirect()->route('dashboard.product.index')->with('success','Product created successffuly');
         // return redirect()->route('route.name');

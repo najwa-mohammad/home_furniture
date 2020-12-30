@@ -24,8 +24,26 @@
                         <div class="login-sr">
                            <div class="login-signup">
                               <ul>
-                                 <li><a href="#">Login</a></li>
-                                 <li><a class="custom-b" href="#">Sign up</a></li>
+                              @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('login')}}">Login <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('do_register')}}">sign in <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    @endguest
+
+                    @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('dashboard.home')}}">Dashboard <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('logout')}}">Logout <span class="sr-only">(current)</span></a>
+                        </li>
+                    @endauth
                               </ul>
                            </div>
                         </div>
@@ -33,7 +51,7 @@
                            <div class="help-box">
                               <ul>
                                  <li> <a data-toggle="modal" data-target="#myModal" href="#"> <span>Change</span> <img src="images/flag.png" alt="" /> </a> </li>
-                                 <li> <a href={{route('dashboard.home')}}>Dashboard </a> </li>
+                                 
                                  
                            
                               </ul>

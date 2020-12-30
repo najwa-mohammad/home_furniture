@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('login', 'AuthController@login')->name('login');
+Route::post('authenticate', 'AuthController@authenticate')->name('authenticate');
+Route::get('logout', 'AuthController@logout')->name('logout');
+Route::get('register', 'AuthController@register')->name('register');
+Route::post('register', 'AuthController@do_register')->name('do_register');
+
 Route::get('/','frontSiteController@showhome')->name('frontsite.index');
 Route::get('/aboutus','frontSiteController@showaboutus')->name('frontsite.aboutus');
 Route::get('/category','frontSiteController@showcategory')->name('frontsite.category');
@@ -23,7 +29,7 @@ Route::get('/profile','frontSiteController@showprofile')->name('frontsite.profil
 Route::get('/howitworks','frontSiteController@showhowitworks')->name('frontsite.howitworks');
 
 
-Route::namespace('Dashboard')->name('dashboard.')->prefix('admin')->group(function(){
+Route::namespace('Dashboard')->middleware('auth')->name('dashboard.')->prefix('admin')->group(function(){
      Route::get('/','DashboardCont@index')->name('home');
      Route::resource('product','productCont');
 });

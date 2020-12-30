@@ -15,7 +15,7 @@
           <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">{{Auth::user()->name}}</a>
         </div>
       </div>
 
@@ -67,7 +67,14 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                            <a href="{{route('logout')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Logout</p>
+                            </a>
+                        </li>
         </ul>
+        
       </nav>
       <!-- /.sidebar-menu -->
     </div>

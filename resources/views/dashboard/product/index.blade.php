@@ -61,17 +61,9 @@
                 <td>
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                            <img alt="Avatar" class="table-avatar" src="{{asset('product_images/'.$product->feature_image)}}">
                         </li>
-                        <li class="list-inline-item">
-                            <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
-                        </li>
-                        <li class="list-inline-item">
-                            <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
-                        </li>
-                        <li class="list-inline-item">
-                            <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar04.png">
-                        </li>
+                       
                     </ul>
                 </td>
                 <td class="project_progress">

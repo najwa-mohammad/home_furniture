@@ -46,6 +46,10 @@
                 <label for="inputName">Price</label>
                 <input type="text" name="price"  value="{{old('price')}}" id="inputName" class="form-control">
               </div>
+              <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="product_image">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
               
               
               
