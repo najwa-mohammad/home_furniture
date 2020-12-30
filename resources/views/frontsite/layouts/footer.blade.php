@@ -28,8 +28,8 @@
                               <h2>SELL ON chamb</h2>
                               <ul>
                                  <li><a href="#">Create account</a></li>
-                                 <li><a href="howitworks.html">How it works suppliers</a></li>
-                                 <li><a href="pricing.html">Pricing</a></li>
+                                 <li><a href={{route('frontsite.howitworks')}}>How it works suppliers</a></li>
+                                 <li><a href={{route('frontsite.pricing')}}>Pricing</a></li>
                                  <li><a href="#">FAQ for Suppliers</a></li>
                               </ul>
                            </div>
@@ -37,15 +37,15 @@
                               <h2>BUY ON chamb</h2>
                               <ul>
                                  <li><a href="#">Create account</a></li>
-                                 <li><a href="#">How it works buyers</a></li>
-                                 <li><a href="#">Categories</a></li>
+                                 <li><a href={{route('frontsite.howitworks')}}>How it works buyers</a></li>
+                                 <li><a href={{route('frontsite.category')}}>Categories</a></li>
                                  <li><a href="#">FAQ for buyers</a></li>
                               </ul>
                            </div>
                            <div class="col-sm-4">
                               <h2>COMPANY</h2>
                               <ul>
-                                 <li><a href="about-us.html">About chamb</a></li>
+                                 <li><a href={{route('frontsite.aboutus')}}>About chamb</a></li>
                                  <li><a href="#">Contact us</a></li>
                                  <li><a href="#">Press</a></li>
                                  <li><a href="#">Careers</a></li>

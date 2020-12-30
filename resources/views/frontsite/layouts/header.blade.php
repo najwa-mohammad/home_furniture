@@ -33,7 +33,9 @@
                            <div class="help-box">
                               <ul>
                                  <li> <a data-toggle="modal" data-target="#myModal" href="#"> <span>Change</span> <img src="images/flag.png" alt="" /> </a> </li>
-                                 <li> <a href="#"><img class="h-i" src="images/help-icon.png" alt="" /> Help </a> </li>
+                                 <li> <a href={{route('dashboard.home')}}>Dashboard </a> </li>
+                                 
+                           
                               </ul>
                            </div>
                         </div>
@@ -42,6 +44,26 @@
                               <ul>
                                  <li><a href={{route('frontsite.howitworks')}}>How it works</a></li>
                                  <li><a href={{route('frontsite.aboutus')}}>Chamb for Business</a></li>
+                                 <li class="dropdown">
+
+                                    <ol>
+                                       <li id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><a>pages</a></li>
+                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href={{route('frontsite.index')}}>HomePag</a><br><br>
+                                          <a class="dropdown-item" href={{route('frontsite.aboutus')}}>About Us</a><br><br>
+                                          <a class="dropdown-item" href={{route('frontsite.category')}}>Category</a><br><br>
+                                          <a class="dropdown-item" href={{route('frontsite.cms')}}>CMS</a><br><br>
+                                          <a class="dropdown-item" href={{route('frontsite.productpage')}}>Product Page</a><br><br>
+                                          <a class="dropdown-item" href={{route('frontsite.pricing')}}>Pricing</a><br><br>
+                                          <a class="dropdown-item" href={{route('frontsite.profile')}}>Profile</a><br><br>
+                                          <a class="dropdown-item" href={{route('frontsite.howitworks')}}>How it Work</a><br><br>
+
+
+                                       </div>
+                                       <!-- </div> -->
+                                       <!-- </div> -->
+                                    </ol>
+                                 
                               </ul>
                            </div>
                         </div>

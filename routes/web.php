@@ -23,11 +23,11 @@ Route::get('/profile','frontSiteController@showprofile')->name('frontsite.profil
 Route::get('/howitworks','frontSiteController@showhowitworks')->name('frontsite.howitworks');
 
 
-
-Route::prefix('dashboard')->group(function(){
-     Route::get('/','Dashboard\DashboardCont@index');
-     Route::resource('posts','Dashboard\postCont');
+Route::namespace('Dashboard')->name('dashboard.')->prefix('admin')->group(function(){
+     Route::get('/','DashboardCont@index')->name('home');
+     Route::resource('product','productCont');
 });
+
 
 
 // Route::get('/', function () {

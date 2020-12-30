@@ -25,7 +25,7 @@
                         <div class="col-sm-3">
                            <div class="form-sh"> <a class="btn" href="#">Search</a> </div>
                         </div>
-                        <p>Or simply<a href="#"> click here </a> and get inspired!</p>
+                        <p>Or simply<a href={{route('frontsite.category')}}> click here </a> and get all Category!</p>
                      </div>
                   </div>
                </div>
@@ -95,7 +95,7 @@
                      </a>
                   </div>
                   <div class="categories_link">
-                     <a href="#">Browse all categories here</a>
+                     <a href={{route('frontsite.category')}}>Browse all categories here</a>
                   </div>
                </div>
             </div>

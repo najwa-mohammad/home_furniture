@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>AdminLTE 3 | Dashboard 2</title>
+  <title>Dashboard @yield('title')</title>
 
   <!-- Font Awesome Icons -->
   
@@ -27,7 +27,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href={{route('dashboard.home')}} class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -154,8 +154,8 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v2</li>
+              <li class="breadcrumb-item"><a href={{route('dashboard.home')}}>Home</a></li>
+              <li class="breadcrumb-item active">@yield('title')</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -163,7 +163,7 @@
     </div>
     <!-- /.content-header -->
 
-<!-- @yield('content') -->
+@yield('content')
   </div>
   <!-- /.content-wrapper -->
 
