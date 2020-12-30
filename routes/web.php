@@ -17,6 +17,7 @@ Route::get('login', 'AuthController@login')->name('login');
 Route::post('authenticate', 'AuthController@authenticate')->name('authenticate');
 Route::get('logout', 'AuthController@logout')->name('logout');
 Route::get('register', 'AuthController@register')->name('register');
+
 Route::post('register', 'AuthController@do_register')->name('do_register');
 
 Route::get('/','frontSiteController@showhome')->name('frontsite.index');
